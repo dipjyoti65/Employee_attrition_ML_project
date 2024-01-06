@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Attrition Result</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="form">
+            <div class="container">
+                <div class="title">Attrition Result</div>
+                <div>
+                    {% if prediction is not none %}
+<!--                    {{ prediction }}-->
+                    <div class="Attrition">
+                      <h4>Attrition: {{ 'Yes' if prediction == '1' else 'No' }}</h4>
+                    </div>
+                    <div class="prob">
+                      <h4>Probability: {{ probability }}%</h4>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

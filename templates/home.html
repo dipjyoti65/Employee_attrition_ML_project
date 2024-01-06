@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Employee Attrition Prediction</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="form">
+            <div class="container">
+                <div class ="title"> Employee Form</div>
+                <!-- <form action="#"> -->
+                <form action="/result" method="post">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Full Name</span>
+                            <input type="text" placeholder="Enter Employee name" name="EmployeeName" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Age</span>
+                            <input type="number" placeholder="Enter Employee's Age" name="Age" required>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">Environment Satisfaction:</span>
+                            <select class="dropdown" id="EnvironmentSatisfaction" name="EnvironmentSatisfaction">
+                                <option value="1">Not Satisfied</option>
+                                <option value="2">Somewhat Satisfied</option>
+                                <option value="3">Satisfied</option>
+                                <option value="4">Very Satisfied</option>
+                            </select>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">JobInvolvement</span>
+                            <select class="dropdown" id="JobInvolvement" name="JobInvolvement">
+                                <option value="1"> Low job involvement</option>
+                                <option value="2"> Moderate job involvement</option>
+                                <option value="3">High job involvement</option>
+                                <option value="4">Very high job involvement</option>
+                            </select>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">Job Level </span>
+                            <select class="dropdown" id="JobLevel" name="JobLevel">
+                                <option value="1">Junior Associate</option>
+                                <option value="2">Specialist</option>
+                                <option value="3">Senior Associate</option>
+                                <option value="4">Director</option>
+                                <option value="5">Executive Director</option>
+                            </select>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">Over Time</span>
+                            <select class="dropdown" id="OverTime" name="OverTime">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">Shift</span>
+                            <select class="dropdown" id="Shift" name="Shift">
+                                <option value="0">Day Shift</option>
+                                <option value="1">Evening Shift</option>
+                                <option value="2">Night Shift</option>
+                                <option value="3">Rotating Shift</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Total Working Years</span>
+                            <input type="number"  name="TotalWorkingYears" required>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">Training Times Last Year</span>
+                            <select class="dropdown" id="TrainingTimesLastYear" name="TrainingTimesLastYear" required>
+                                <option value="0">No training</option>
+                                <option value="1"> One training session</option>
+                                <option value="2">Two training sessions:</option>
+                                <option value="3">Three training sessions</option>
+                                <option value="4">Four training sessions</option>
+                                <option value="5">Five training sessions</option>
+                                <option value="6">Six training sessions</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="details">Years At  Company</span>
+                            <input type="number"  name="YearsAtCompany" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Years In Current Role</span>
+                            <input type="number"  name="YearsInCurrentRole" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Years With Current Manager</span>
+                            <input type="number"  name="YearsWithCurrManager" required>
+                        </div> 
+                        
+                        <div class="options">
+                            <span class="options-label">Job Role:</span>
+                            <select class="dropdown" id="cat_Therapist" name="cat_Therapist">
+                                <option value="0">Nurse</option>
+                                <option value="0">Doctor</option>
+                                <option value="0">Administrative</option>
+                                <option value="1">Therapist</option>
+                                <option value="0">Other</option>
+                            </select>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">Is the employee Married:</span>
+                            <select class="dropdown" id="cat_Married" name="cat_Married">
+                                <option value="1">Married</option>
+                                <option value="0">Divorced</option>
+                            </select>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">Is the employee Single:</span>
+                            <select class="dropdown" id="cat_Single" name="cat_Single">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                        <div class="options">
+                            <span class="options-label">Income Catagory:</span>
+                            <select class="dropdown" id="cat_high" name="cat_high">
+                                <option value="0">Low (less than 6000)</option>
+                                <option value="0">Medium (More than 6000 and lesser than 15000)</option>
+                                <option value="1">High (More than 15000)</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="feedback-btn">
+                        <input type="submit" value="GET PREDICTION">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="../static/script.js"></script>
+    </body>
+</html>
